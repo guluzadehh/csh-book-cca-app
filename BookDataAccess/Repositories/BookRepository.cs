@@ -44,15 +44,4 @@ public class BookRepository(string connectionString) : BaseRepository(connection
             splitOn: "AuthorId,GenreId",
             commandType: CommandType.StoredProcedure);
     }
-
-    //     public Book GetBook(int id)
-    //     {
-    //         using IDbConnection connection = new SqlConnection(GetConnectionString());
-    //         return connection.Query<Book, Author, Genre, Book>(
-    //             "spBooks_GetById;",
-    //             ReadData,
-    //             param: new { id },
-    //             splitOn: "AuthorId,GenreId",
-    //             commandType: CommandType.StoredProcedure);
-    //     }
 }
